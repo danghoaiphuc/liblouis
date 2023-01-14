@@ -25,11 +25,9 @@
 
 # auto-converting Vietnamese unicode composit to built-in one
 
-
-
-# special Vietnamese characters
+# Additional Vietnamese characters, mostly with accents
 lowercase đ 2346
-lowercase á 35-1          a accent grave
+lowercase á 35-1          a acute accent
 lowercase à 56-1
 lowercase ả 26-1
 lowercase ã 36-1
