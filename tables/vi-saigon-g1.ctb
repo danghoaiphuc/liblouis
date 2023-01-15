@@ -41,19 +41,34 @@
 #
 # This braille system still used by many visually impaired adults in the Southern area of Vietnam.
 
+# This table uses old letter d dots 1356 and đ dots 145.
+# It seems a bug of LibLouis when placing lowercase an uppercase optcodes before an included file. But it doesn't overwrite the same optcode command in included file.
+# Must place in this order to get the expected overwritten result. 
+base uppercase D d
+base uppercase Đ đ
+base uppercase \x00d0 \x00f0 Ðð
+lowercase d 1356
+lowercase đ 145
+lowercase \x00f0 145 ð
+
 include vi-charsdef.uti
+
+lowercase d 1356
+lowercase đ 145
+lowercase \x00f0 145 ð
 
 # Braille indicators definition
 numsign 3456
 #letsign 6
 # caps indicator
 capsletter 46
-begcapsword 456
+begcapsword 46-46
 endcapsword 46-13
 lencapsphrase 5
 begcapsphrase 46-46
 begcaps 46-46
 endcaps 46-13
+
 # no letter sign before Vietnamese single-letter words
 #noletsign áàảãạắằẳẵặấầẩẫậéèẻẽẹếềểễệíìỉĩịóòỏõọốồổỗộớờởỡợúùủũụứừửữựýỳỷỹỵ
 #word a =

@@ -51,7 +51,9 @@ punctuation ( 4-126
 display ) 23456
 punctuation ) 4-345
 display * 16
-sign * 236
+punctuation * 236
+sign * 5-236
+math * 5-236
 display + 346
 math + 5-235
 display , 6

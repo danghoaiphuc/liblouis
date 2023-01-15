@@ -47,15 +47,15 @@ numsign 3456
 # caps definitions
 capsletter 46
 begcapsword 456
-endcapsword 46-13
-lencapsphrase 5
+endcapsword 156
+lencapsphrase 2
 begcapsphrase 46-46
 begcaps 46-46
-endcaps 46-13
+endcaps 156
 
 # force to place tone marks after qu and gi
 always qu =
-always gi =
+#always gi =
 
 # place tone marks before the first vowel
 always iế 35-24-126
@@ -126,3 +126,116 @@ always yề 56-13456-126
 always yể 26-13456-126
 always yễ 36-13456-126
 always yệ 6-13456-126
+
+# Rule to place accent before cap sign. Need to confirm.
+##// Á À Ả Ã Ạ
+noback pass2 $s[@46-35-1] @35-46-1
+noback pass2 `[@46-35-1] @35-46-1
+noback pass2 $s[@46-56-1] @56-46-1
+noback pass2 `[@46-56-1] @56-46-1
+noback pass2 $s[@46-26-1] @26-46-1
+noback pass2 `[@46-26-1] @26-46-1
+noback pass2 $s[@46-36-1] @36-46-1
+noback pass2 `[@46-36-1] @36-46-1
+noback pass2 $s[@46-6-1] @6-46-1
+noback pass2 `[@46-6-1] @6-46-1
+##// Ấ Ầ Ẩ Ẫ Ậ
+noback pass2 $s[@46-35-16] @35-46-16
+noback pass2 `[@46-35-16] @35-46-16
+noback pass2 $s[@46-56-16] @56-46-16
+noback pass2 `[@46-56-16] @56-46-16
+noback pass2 $s[@46-26-16] @26-46-16
+noback pass2 `[@46-26-16] @26-46-16
+noback pass2 $s[@46-36-16] @36-46-16
+noback pass2 `[@46-36-16] @36-46-16
+noback pass2 $s[@46-6-16] @6-46-16
+noback pass2 `[@46-6-16] @6-46-16
+##// Ắ Ằ Ẳ Ẵ Ặ
+noback pass2 $s[@46-35-345] @35-46-345
+noback pass2 `[@46-35-345] @35-46-345
+noback pass2 $s[@46-56-345] @56-46-345
+noback pass2 `[@46-56-345] @56-46-345
+noback pass2 $s[@46-26-345] @26-46-345
+noback pass2 `[@46-26-345] @26-46-345
+noback pass2 $s[@46-36-345] @36-46-345
+noback pass2 `[@46-36-345] @36-46-345
+noback pass2 $s[@46-6-345] @6-46-345
+noback pass2 `[@46-6-345] @6-46-345
+##// É È Ẻ Ẽ Ẹ
+noback pass2 $s[@46-35-15] @35-46-15
+noback pass2 `[@46-35-15] @35-46-15
+noback pass2 $s[@46-56-15] @56-46-15
+noback pass2 `[@46-56-15] @56-46-15
+noback pass2 $s[@46-26-15] @26-46-15
+noback pass2 `[@46-26-15] @26-46-15
+noback pass2 $s[@46-36-15] @36-46-15
+noback pass2 `[@46-36-15] @36-46-15
+noback pass2 $s[@46-6-15] @6-46-15
+noback pass2 `[@46-6-15] @6-46-15
+##// Ế Ề Ể Ễ Ệ
+noback pass2 $s[@46-35-126] @35-46-126
+noback pass2 `[@46-35-126] @35-46-126
+noback pass2 $s[@46-56-126] @56-46-126
+noback pass2 `[@46-56-126] @56-46-126
+noback pass2 $s[@46-26-126] @26-46-126
+noback pass2 `[@46-26-126] @26-46-126
+noback pass2 $s[@46-36-126] @36-46-126
+noback pass2 `[@46-36-126] @36-46-126
+noback pass2 $s[@46-6-126] @6-46-126
+noback pass2 `[@46-6-126] @6-46-126
+##// Ó Ò Ỏ Õ Ọ
+noback pass2 $s[@46-35-135] @35-46-135
+noback pass2 `[@46-35-135] @35-46-135
+noback pass2 $s[@46-56-135] @56-46-135
+noback pass2 `[@46-56-135] @56-46-135
+noback pass2 $s[@46-26-135] @26-46-135
+noback pass2 `[@46-26-135] @26-46-135
+noback pass2 $s[@46-36-135] @36-46-135
+noback pass2 `[@46-36-135] @36-46-135
+noback pass2 $s[@46-6-135] @6-46-135
+noback pass2 `[@46-6-135] @6-46-135
+##// Ố Ồ Ổ Ỗ Ộ
+noback pass2 $s[@46-35-1456] @35-46-1456
+noback pass2 `[@46-35-1456] @35-46-1456
+noback pass2 $s[@46-56-1456] @56-46-1456
+noback pass2 `[@46-56-1456] @56-46-1456
+noback pass2 $s[@46-26-1456] @26-46-1456
+noback pass2 `[@46-26-1456] @26-46-1456
+noback pass2 $s[@46-36-1456] @36-46-1456
+noback pass2 `[@46-36-1456] @36-46-1456
+noback pass2 $s[@46-6-1456] @6-46-1456
+noback pass2 `[@46-6-1456] @6-46-1456
+##// Ớ Ờ Ở Ỡ Ợ
+noback pass2 $s[@46-35-246] @35-46-246
+noback pass2 `[@46-35-246] @35-46-246
+noback pass2 $s[@46-56-246] @56-46-246
+noback pass2 `[@46-56-246] @56-46-246
+noback pass2 $s[@46-26-246] @26-46-246
+noback pass2 `[@46-26-246] @26-46-246
+noback pass2 $s[@46-36-246] @36-46-246
+noback pass2 `[@46-36-246] @36-46-246
+noback pass2 $s[@46-6-246] @6-46-246
+noback pass2 `[@46-6-246] @6-46-246
+##// Ú Ù Ủ Ũ Ụ
+noback pass2 $s[@46-35-136] @35-46-136
+noback pass2 `[@46-35-136] @35-46-136
+noback pass2 $s[@46-56-136] @56-46-136
+noback pass2 `[@46-56-136] @56-46-136
+noback pass2 $s[@46-26-136] @26-46-136
+noback pass2 `[@46-26-136] @26-46-136
+noback pass2 $s[@46-36-136] @36-46-136
+noback pass2 `[@46-36-136] @36-46-136
+noback pass2 $s[@46-6-136] @6-46-136
+noback pass2 `[@46-6-136] @6-46-136
+##// Ứ Ừ Ử Ữ Ự
+noback pass2 $s[@46-35-1256] @35-46-1256
+noback pass2 `[@46-35-1256] @35-46-1256
+noback pass2 $s[@46-56-1256] @56-46-1256
+noback pass2 `[@46-56-1256] @56-46-1256
+noback pass2 $s[@46-26-1256] @26-46-1256
+noback pass2 `[@46-26-1256] @26-46-1256
+noback pass2 $s[@46-36-1256] @36-46-1256
+noback pass2 `[@46-36-1256] @36-46-1256
+noback pass2 $s[@46-6-1256] @6-46-1256
+noback pass2 `[@46-6-1256] @6-46-1256
+##// Y with accent to be confirmed as y could be considered as rhythm
