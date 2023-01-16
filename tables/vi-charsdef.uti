@@ -23,13 +23,15 @@
 #
 # Created and maintained by: Dang Hoai Phuc, danghoaiphuc@gmail.com
 
+include unicode.dis
+
 include spaces.uti
 include latinLetterDef6Dots.uti
 include digits6Dots.uti
 include litdigits6Dots.uti
 
-# Vietnamese signs and punctuations definition
-include vi-puncsdef.uti
 # Additional Vietnamese letter definition
 include vi-lettersdef.uti
+# Vietnamese signs and punctuations definition
+include vi-puncsdef.uti
 include braille-patterns.cti

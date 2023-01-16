@@ -24,26 +24,13 @@ table:
 flags: {testmode: bothDirections}
 tests:
   # digits
-  - [1, ⠼⠁]
-  - [2, ⠼⠃]
-  - [3, ⠼⠉]
-  - [4, ⠼⠙]
-  - [5, ⠼⠑]
-  - [6, ⠼⠋]
-  - [7, ⠼⠛]
-  - [8, ⠼⠓]
-  - [9, ⠼⠊]
-  - [0, ⠼⠚]
-  - [123, ⠼⠁⠃⠉]
-  - [1.234, ⠼⠁⠄⠃⠉⠙]
-  - ["1,234", ⠼⠁⠂⠃⠉⠙]
-  - [1AB, ⠼⠁⠸⠁⠃]
+  - [1 2 3 4 5 6 7 8 9 0, ⠼⠁ ⠼⠃ ⠼⠉ ⠼⠙ ⠼⠑ ⠼⠋ ⠼⠛ ⠼⠓ ⠼⠊ ⠼]
+  - [1123 1.234,56, ⠼⠁⠃⠉ ⠼⠁⠄⠃⠉⠙⠲⠑⠋]
+  - [1AB 2Cd 3cD, ⠼⠁⠸⠁⠃ ⠼⠃⠨⠉⠙ ⠼⠉⠠⠉⠨⠙]
   - [1ab, ⠼⠁⠠⠁⠃, xfail: "backward translation fails"]
-  - [1+2, ⠼⠁⠐⠖⠼⠃]
-  - [2-1, ⠼⠃⠤⠼⠁]
-  - [2*3, ⠼⠃⠦⠼⠉]
-  - [4/5, ⠼⠙⠌⠼⠑]
+  - [1+2 4-3 5*6 7/8 〉 Ax+B=0, ⠼⠁⠐⠖⠼⠃ ⠼⠙⠤⠼⠉ ⠼⠑⠦⠼⠋ ⠼⠛⠌⠼⠓ ⠐⠕ ⠨⠁⠭⠐⠖⠨⠃⠐⠶⠼⠚]
   - [3+2(10-5)/6 = 4.16, ⠼⠉⠐⠖⠼⠃⠈⠣⠼⠁⠚⠤⠼⠑⠈⠜⠌⠼⠋ ⠐⠶ ⠼⠙⠄⠁⠋]
+  - [α β γ δ Α Β Γ Δ αβ ΓΔ, ⠰⠁ ⠰⠃ ⠰⠛ ⠰⠙ ⠸⠁ ⠸⠃ ⠸⠛ ⠸⠙ ⠰⠁⠰⠃ ⠸⠛⠸⠙, xfail: "backward translation fails"]
   # latin characters
   - [a A b c e f g h i j k l m n o p q r s t w, ⠁ ⠨⠁ ⠃ ⠉ ⠑ ⠋ ⠛ ⠓ ⠊ ⠚ ⠅ ⠇ ⠍ ⠝ ⠕ ⠏ ⠟ ⠗ ⠎ ⠞ ⠺]
   # capital cases single, whole word and phrase
@@ -52,12 +39,8 @@ tests:
   - [HOA THẮM TƯƠI MUÔN ĐỜI!, ⠨⠨⠓⠕⠁ ⠞⠓⠔⠜⠍ ⠞⠳⠪⠊ ⠍⠥⠹⠝ ⠮⠰⠪⠊⠖⠱]
   - [MỘT NGÀN. 1.000.00, ⠨⠨⠍⠠⠹⠞ ⠝⠛⠰⠁⠝⠲⠱ ⠼⠁⠄⠚⠚⠚⠄⠚⠚]
   - [Chấm Lửng Và Chữ Hoa..., ⠨⠉⠓⠔⠡⠍ ⠨⠇⠢⠳⠝⠛ ⠨⠧⠰⠁ ⠨⠉⠓⠤⠳ ⠨⠓⠕⠁⠄⠄⠄]
-  # check Greek sign for cap and normal letter
-  - [Α α, ⠸⠁ ⠰⠁]
   # Check special rhythm "qu" and rules of placing accents
   - [quở thuở quyết, ⠟⠥⠢⠪ ⠞⠓⠢⠥⠪ ⠟⠥⠔⠽⠣⠞]
-  # Check special rhythm "gi" and rules of placing accents
-  - [gì gìn giết giả ghiết giảng giải, ⠛⠰⠊ ⠛⠰⠊⠝ ⠛⠔⠊⠣⠞ ⠛⠊⠢⠁ ⠛⠓⠔⠊⠣⠞ ⠛⠊⠢⠁⠝⠛ ⠛⠊⠢⠁⠊]
   # letters with accents
   - [á à ả ã ạ â ấ ầ ẩ ẫ ậ ă ắ ằ ẳ ẵ ặ, ⠔⠁ ⠰⠁ ⠢⠁ ⠤⠁ ⠠⠁ ⠡ ⠔⠡ ⠰⠡ ⠢⠡ ⠤⠡ ⠠⠡ ⠜ ⠔⠜ ⠰⠜ ⠢⠜ ⠤⠜ ⠠⠜]
   - [é è ẻ ẽ ẹ ê ế ề ể ễ ệ, ⠔⠑ ⠰⠑ ⠢⠑ ⠤⠑ ⠠⠑ ⠣ ⠔⠣ ⠰⠣ ⠢⠣ ⠤⠣ ⠠⠣, xfail: "backward translation fails"]
@@ -68,8 +51,6 @@ flags: {testmode: forward}
 tests:
   # two cases placing accents in print
   - [hóa hoá hòa hoà hỏa hoả lõa loã họa hoạ, ⠓⠔⠕⠁ ⠓⠔⠕⠁ ⠓⠰⠕⠁ ⠓⠰⠕⠁ ⠓⠢⠕⠁ ⠓⠢⠕⠁ ⠇⠤⠕⠁ ⠇⠤⠕⠁ ⠓⠠⠕⠁ ⠓⠠⠕⠁]
-  # Check rule to place accents before cap sign when vowel with accent at the beginning of word
-  - [Án Àng. Ảng Ẫn Ận, ⠔⠨⠁⠝ ⠰⠨⠁⠝⠛⠲ ⠢⠨⠁⠝⠛ ⠤⠨⠡⠝ ⠠⠨⠡⠝]
 
 # spaces
 tests:

@@ -35,15 +35,20 @@
 #-author: Dang Hoai Phúc <danghoaiphuc@gmail.com>
 #-maintainer: Dang Hoai Phuc <danghoaiphuc@gmail.com>
 #
-#-updated: 2020-11-17
+#-updated: 2020-1-16
 #
 # Based on
 # <https://www.saomaicenter.org/en/blog/accessible-formats/rules-and-guidelines-contracted-vietnamese-braille-grade-2>
 
 include vi-charsdef.uti
 
-# Braille indicators definition
-numsign 3456
+# number indicator definitions
+numsign 3456  number sign, just a dots operand
+numericmodechars .,
+nocontractsign 6
+nonumsign 6
+numericnocontchars abcdefghij
+# Braille letter indicators definition
 #letsign 6
 # caps indicator
 capsletter 46
@@ -735,12 +740,4 @@ match %a iều %[_.^] 56-2346
 match %a iểu %[_.^] 26-2346
 match %a iễu %[_.^] 36-2346
 match %a iệu %[_.^] 6-2346
-
-
-# disabled, encourage to place tone marks right infront of capital vowel letters, instead of before cap indicator
-#noback pass2 @46-35 @35-46
-#noback pass2 @46-56 @56-46
-#noback pass2 @46-26 @26-46
-#noback pass2 @46-36 @36-46
-#noback pass2 @46-6 @6-46
 
